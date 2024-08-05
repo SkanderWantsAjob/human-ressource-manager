@@ -49,7 +49,8 @@ public class SecurityConfiguration {
                 .permitAll();
                 registry.requestMatchers("auth/login").permitAll();
 
-                registry.requestMatchers("/api/employees").permitAll()
+                registry.requestMatchers("/api/employees").permitAll();
+                registry.requestMatchers("/api/**").permitAll()
                 .anyRequest()
                 .authenticated();
                 })
